@@ -5,6 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const session = require("express-session");
+const orderRoutes = require("./routes/orderRoutes");
 const config = require("./config/serverConfig");
 
 const app = express();
@@ -23,5 +24,8 @@ app.use(
         cookie: { secure: false },
     })
 );
+
+// Routes
+app.use("/", orderRoutes);
 
 app.listen(config.PORT, () => console.log(`Server running on port ${config.PORT}`));

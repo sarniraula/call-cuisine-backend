@@ -1,0 +1,5 @@
+{
+  "Chicken Burger": { "price": 5.99, "in_stock": true },
+  "Coke": { "price": 1.99, "in_stock": false },
+  "French Fries": { "price": 3.49, "in_stock": true }
+}
