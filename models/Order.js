@@ -12,7 +12,13 @@ const orderSchema = new mongoose.Schema({
         }
     ],
     totalPrice: Number,
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    //status should only accept values pending, completed, cancelled
+    status: {
+        type: String,
+        enum: ["pending", "completed", "cancelled"],
+        default: "pending"
+    }
 });
 
 const Order = mongoose.model("Order", orderSchema);
