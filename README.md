@@ -24,17 +24,15 @@ Call Cuisine is an AI-powered restaurant order automation system that takes cust
 - **Order History**: (Planned) A page to track past orders with filters.
 
 ## Tech Stack
-**Backend:** Node.js, Express.js, MongoDB, Twilio (or Retell AI for call handling), Socket.io
+**Backend:** Node.js, Express.js, MongoDB, Twilio for call handling, Socket.io for realtime order updates.
 
 **Frontend:** Next.js, Tailwind CSS, React, Socket.io-client
 
 ## System Architecture
 1. Customer calls the restaurant number.
-2. AI processes speech-to-text and extracts order details.
+2. Twilio AI processes speech-to-text and openAI extracts order details.
 3. The backend stores the order in MongoDB and sends confirmation via Twilio SMS.
-4. The frontend dashboard displays orders for restaurant staff.
-5. Staff members can update order statuses in real time.
-
+4. The frontend dashboard recieves order in real time and displays orders for restaurant staff.
 ---
 
 ## Setup Instructions
